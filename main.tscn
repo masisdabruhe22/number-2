@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://envpgmjpgjam" path="res://character_body_2d.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://ffoajy0x0kfh" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bw6vhskxeuana" path="res://character_body_2d_2.gd" id="3_h2yge"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3umq7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vwgwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tax54"]
 
 [node name="Node2D" type="Node2D" unique_id=852671041]
 
@@ -27,4 +30,14 @@ shape = SubResource("CircleShape2D_vwgwg")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D/Icon/CharacterBody2D" unique_id=1034824961]
 position = Vector2(-404, 2)
+texture = ExtResource("1_ig7tw")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1332331426]
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=2019651008]
+shape = SubResource("RectangleShape2D_tax54")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D2" unique_id=1248210146]
+position = Vector2(180, 120)
 texture = ExtResource("1_ig7tw")
