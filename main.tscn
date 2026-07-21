@@ -5,6 +5,8 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3umq7"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vwgwg"]
+
 [node name="Node2D" type="Node2D" unique_id=852671041]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1314521934]
@@ -15,4 +17,14 @@ shape = SubResource("CircleShape2D_3umq7")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D" unique_id=925633538]
 position = Vector2(1043, 111)
+texture = ExtResource("1_ig7tw")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CharacterBody2D/Icon" unique_id=1817145658]
+script = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Icon/CharacterBody2D" unique_id=2108713144]
+shape = SubResource("CircleShape2D_vwgwg")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D/Icon/CharacterBody2D" unique_id=1034824961]
+position = Vector2(-404, 2)
 texture = ExtResource("1_ig7tw")
